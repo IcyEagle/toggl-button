@@ -102,6 +102,7 @@ window.TogglOrigins = {
   "visualstudio.com": {"url": "*://*.visualstudio.com/*", "name": "VisualStudio"},
   "waffle.io": {"url": "*://waffle.io/*", "name": "Waffle"},
   "wordpress.com": {"url": "*://wordpress.com/*", "name": "Wordpress"},
+  "workflowy.com": {"url": "*://*.workflowy.com/*", "name": "Workflowy"},
   "worksection.com": {"url": "*://*.worksection.com/*", "name": "Worksection"},
   "worksection.eu": {"url": "*://*.worksection.eu/*", "name": "Worksection", "clone" : "true"},
   "worksection.net": {"url": "*://*.worksection.net/*", "name": "Worksection", "clone" : "true"},
