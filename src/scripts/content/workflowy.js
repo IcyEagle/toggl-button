@@ -15,7 +15,7 @@ togglbutton.render(itemSelector, {observe: true}, function (elem) {
   link = togglbutton.createTimerLink({
     className: 'trello',
     description: descriptionElem.innerText,
-    projectName: projectElem.innerText,
+    // projectName: projectElem.innerText,
     calculateTotal: true,
     buttonType: "minimal"
   });
