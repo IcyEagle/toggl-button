@@ -4,7 +4,7 @@
 'use strict';
 
 var titleSelector = '.project.open.selected > div.name .content';
-var itemSelector = '.project.open.selected div.name .content:not(.toggl)';
+var itemSelector = '.project.open div.name .content:not(.toggl)';
 const altT = 84;
 
 togglbutton.render(itemSelector, {observe: true}, function (elem) {

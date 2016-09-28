@@ -1140,5 +1140,6 @@ only screen and (min-resolution: 192dpi) {
 }
 
 .workflowy {
+  visibility: hidden;
   margin-left: 10px;
 }
