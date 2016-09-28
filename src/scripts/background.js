@@ -1489,9 +1489,12 @@ TogglButton = {
       chrome.tabs.insertCSS(tabId, {file: "styles/autocomplete.css"});
     });
 
-    chrome.tabs.executeScript(tabId, {file: "scripts/autocomplete.js"}, function () {
-      chrome.tabs.executeScript(tabId, {file: "scripts/common.js"}, function () {
-        chrome.tabs.executeScript(tabId, {file: "scripts/content/" + file});
+    // jQuery should be loaded first because "$" function will be overwritten by local implementation
+    chrome.tabs.executeScript(tabId, {file: "scripts/vendor/jquery-3.1.1.min.js"}, function () {
+      chrome.tabs.executeScript(tabId, {file: "scripts/autocomplete.js"}, function () {
+        chrome.tabs.executeScript(tabId, {file: "scripts/common.js"}, function () {
+          chrome.tabs.executeScript(tabId, {file: "scripts/content/" + file});
+        });
       });
     });
   },
