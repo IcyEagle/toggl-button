@@ -5,7 +5,7 @@
 
 var titleSelector = '.project.open.selected > div.name .content';
 var itemSelector = '.project.open div.name .content:not(.toggl)';
-const altT = 84;
+const TCode = 84;
 
 togglbutton.render(itemSelector, {observe: true}, function (elem) {
   var container = jQuery("#toggl_anchor");
@@ -31,7 +31,7 @@ togglbutton.render(itemSelector, {observe: true}, function (elem) {
   });
 
   jQuery(elem).keydown(function (event) {
-    if (event.keyCode == altT) {
+    if (event.keyCode == TCode && event.altKey) {
       link.click();
       event.preventDefault();
     }
