@@ -8,12 +8,22 @@ var itemSelector = '.project.open div.name .content:not(.toggl)';
 const altT = 84;
 
 togglbutton.render(itemSelector, {observe: true}, function (elem) {
-  var link, container = createTag('span', 'workflowy'),
+  var container = jQuery("#toggl_anchor");
+  if ( ! container.length) {
+    container = jQuery('<div></div>', {
+        id: "toggl_anchor",
+        style: "position:absolute;left:45%;top:50%;opacity:0"
+      }
+    );
+    container.appendTo('body');
+  }
+
+  var link,
     projectElem = $(titleSelector),
     descriptionElem = elem;
 
   link = togglbutton.createTimerLink({
-    className: 'trello',
+    className: 'hide-button',
     description: descriptionElem.innerText,
     // projectName: projectElem.innerText,
     calculateTotal: true,
@@ -27,6 +37,6 @@ togglbutton.render(itemSelector, {observe: true}, function (elem) {
     }
   });
 
-  container.appendChild(link);
-  descriptionElem.appendChild(container);
+  container.append(link);
+  // descriptionElem.appendChild(container);
 });

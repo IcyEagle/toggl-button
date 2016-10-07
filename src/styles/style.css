@@ -1144,3 +1144,9 @@ only screen and (min-resolution: 192dpi) {
   visibility: hidden;
   margin-left: 10px;
 }
+
+.hide-button {
+  display: none;
+  width: 0 !important;
+  padding: 0 !important;
+}
